@@ -18,14 +18,41 @@ body {
 :root {
     /* colors  */
     --black: #000;
+    --semi-black: #101828;
     --white: #FFF;
+    --red-color: #E7000B;
     --semi-red: #F54900;
+    --light-red: #FEF2F2;
     --main-color: #fb2c36;
+    --dark-red: #9F0712;
     --sub-color: #ff6900;
     --orange: #FFB86A;
+    --light-orange: #fff7ed;
+    --real-yellow: #FDC700;
+    --semi-real-yellow: #FFB900;
+    --yellow-card: #FEF9C2;
+    --main-yellow: #fefce8;
+    --dark-yellow: #ffd6a7;
+    --darknes-yellow: #D08700;
     --light-yellow: #ffedd4;
+    --yellow-light: #FFFBEB;
     --main-gray: #74767B;
+    --dark-gray: #364153;
     --sub-gray: #4a5565;
+    --light-gray: #e5e7eb;
+    --main-blue: #2B7FFF;
+    --semi-main-blue: #155DFC;
+    --dark-blue: #1447E6;
+    --light-blue: #DBEAFE;
+    --main-green: #00A63E;
+    --dark-green: #008236;
+    --light-green: #DBFCE7;
+    --scroll: #ffe2e2;
+    --scroll-hover: #B46653;
+    --check-color: #E17100;
+    --card-bg: #F9FAFB;
+    --pink-color: #E60076;
+    --light-pink: #FCE7F3;
 
     /* font size  */
     --fs-xs: 12px;
@@ -81,12 +108,42 @@ body {
             var(--main-color));
 }
 
+.sub-linear-gradient {
+    background: linear-gradient(to bottom right,
+            var(--light-orange),
+            var(--main-yellow));
+}
+
 .gray {
     color: var(--main-gray);
 }
 
 .sub-gray {
-    color: var(--sub-gray) !important;
+    color: var(--sub-gray);
+}
+
+.dark-gray {
+    color: var(--dark-gray);
+}
+
+.semi-black {
+    color: var(--semi-black);
+}
+
+.dark-red {
+    color: var(--dark-red);
+}
+
+.red {
+    color: var(--red-color);
+}
+
+.check-color {
+    color: var(--check-color);
+}
+
+.card-bg {
+    background-color: var(--card-bg);
 }
 
 /* end globle feature */
@@ -141,12 +198,275 @@ header {
 
 /* start hero section */
 
+.main-row {
+    border-radius: 30px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    background-color: var(--white);
+    border: 1px solid var(--light-yellow);
+}
+
+.meal-image,
+.meal-image img {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+.meal-details {
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+
+}
+
+.rate {
+    background-color: var(--white);
+    top: 20px;
+    left: 20px;
+}
+
+.rate i {
+    color: var(--real-yellow);
+}
+
+.time-container {
+    background-color: var(--white);
+    width: 90%;
+    bottom: 20px;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.prep i {
+    color: var(--sub-color);
+}
+
+.cook i {
+    color: var(--main-color);
+}
+
+.servings i {
+    color: var(--main-blue);
+}
+
+.meal-diffeculty {
+    background-color: var(--light-green);
+    color: var(--dark-green);
+}
+
+.meal-place {
+    background-color: var(--light-blue);
+    color: var(--dark-blue);
+}
+
+.icons {
+    width: 50px;
+    height: 50px;
+    background-color: var(--light-yellow);
+    color: var(--semi-red);
+    transition: 0.3s;
+}
+
+.icons:hover {
+    background-color: var(--dark-yellow);
+}
+
+.time-container {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+.alert-container {
+    background-color: var(--light-red);
+    border-left: 4px solid var(--main-color);
+}
+
+.alert-icon {
+    color: var(--main-color);
+}
+
+.meal-carousel .carousel-indicators {
+    position: static;
+    display: flex;
+    justify-content: center;
+}
+
+.meal-carousel .carousel-indicators [data-bs-target] {
+    all: unset;
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    color: var(--main-gray);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.meal-carousel .carousel-indicators .active {
+    color: var(--semi-red) !important;
+}
+
+.meal-carousel .carousel-indicators [data-bs-target]:hover {
+    color: var(--sub-gray);
+}
+
+.meal-carousel .carousel-indicators::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-gray);
+}
+
+.meal-carousel .carousel-indicators [data-bs-target]::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--semi-red);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: 0.3s ease;
+}
+
+.meal-carousel .carousel-indicators .active::after {
+    transform: scaleX(1);
+}
+
+.carousel-item {
+    height: 340px;
+    max-height: 340px;
+    overflow: auto;
+}
+
+.ingradients-number {
+    width: 26px;
+    height: 26px;
+    background-color: var(--sub-color);
+}
+
+.instruction-number {
+    width: 48px;
+    height: 48px;
+    background-color: var(--sub-color);
+}
+
+.tips-container {
+    background-color: var(--yellow-light);
+    border-left: 4px solid var(--semi-real-yellow);
+}
+
+.nutrition-icon {
+    width: 42px;
+    height: 42px;
+}
+
+ul {
+    padding: 0px;
+}
+
+.cal-icon {
+    background-color: var(--light-yellow);
+    color: var(--semi-red);
+}
+
+.protein-icon {
+    background-color: var(--light-blue);
+    color: var(--semi-main-blue);
+}
+
+.carb-icon {
+    background-color: var(--yellow-card);
+    color: var(--darknes-yellow);
+}
+
+.fat-icon {
+    background-color: var(--scroll);
+    color: var(--red-color);
+}
+
+.fiber-icon {
+    background-color: var(--light-green);
+    color: var(--main-green);
+}
+
+.sodium-icon {
+    background-color: var(--light-pink);
+    color: var(--pink-color);
+}
+
+
+.btn {
+    background: linear-gradient(to right, #f97316, #ef4444);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+        0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #ea580c, #dc2626);
+    box-shadow: 0 20px 25px -5px #0000001a,
+        0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    transform: scale(1.05);
+}
+
+.btn-container::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--light-gray);
+}
+
+
 /* end hero section */
+
+
+/* start more future */
+
+.carousel-item::-webkit-scrollbar,
+.meal-details::-webkit-scrollbar {
+    width: 6px;
+}
+
+.carousel-item::-webkit-scrollbar-track,
+.meal-details::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.carousel-item::-webkit-scrollbar-thumb,
+.meal-details::-webkit-scrollbar-thumb {
+    background: var(--light-red);
+    border-radius: 30px;
+}
+
+.carousel-item::-webkit-scrollbar-thumb:hover,
+.meal-details::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-red);
+}
+
+/* end more future */
 
 
 /* media */
 
 /* sm */
+@media screen and (max-width:576px) {
+    .top-container {
+        flex-wrap: wrap-reverse;
+    }
+
+    .icons-container {
+        margin-bottom: 20px;
+    }
+
+}
+
 @media screen and (min-width:576px) {}
 
 /* md */
@@ -158,10 +478,39 @@ header {
     .nav-ul {
         border-top: none;
     }
+
+    .time-container {
+        font-size: 24px;
+        margin-bottom: 12px;
+    }
 }
 
 /* lg */
-@media screen and (min-width:992px) {}
+@media screen and (min-width:992px) {
+    .main-row {
+        height: 100vh;
+    }
+
+    .meal-details,
+    .meal-image {
+        height: 100vh;
+        max-height: 100vh;
+    }
+
+    .meal-image,
+    .meal-image img {
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 0px;
+    }
+
+    .meal-details {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 30px;
+        border-top-right-radius: 30px;
+        overflow-y: auto;
+    }
+}
 
 /* xl */
 @media screen and (min-width:1200px) {
@@ -173,6 +522,6 @@ header {
         --fs-xl: 24px;
         --fs-xxl: 32px;
         --fs-3xl: 48px;
-        --fs-4xl: 60px;
+        --fs-4xl: 38px;
     }
 }
