@@ -423,6 +423,10 @@ ul {
     background-color: var(--light-gray);
 }
 
+.meal-image {
+    max-height: 500px;
+}
+
 
 /* end hero section */
 
@@ -455,7 +459,7 @@ ul {
 
 /* media */
 
-/* sm */
+/* xs */
 @media screen and (max-width:576px) {
     .top-container {
         flex-wrap: wrap-reverse;
@@ -465,9 +469,11 @@ ul {
         margin-bottom: 20px;
     }
 
-}
+    .meal-image {
+        max-height: 250px;
+    }
 
-@media screen and (min-width:576px) {}
+}
 
 /* md */
 @media screen and (min-width:768px) {
@@ -489,6 +495,10 @@ ul {
 @media screen and (min-width:992px) {
     .main-row {
         height: 100vh;
+    }
+
+    .meal-image {
+        max-height: fit-content;
     }
 
     .meal-details,
