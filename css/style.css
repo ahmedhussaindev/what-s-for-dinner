@@ -470,7 +470,8 @@ ul {
     }
 
     .meal-image {
-        max-height: 250px;
+        max-height: 400px;
+        height: 400px;
     }
 
 }
