@@ -119,7 +119,7 @@ body {
 }
 
 .sub-gray {
-    color: var(--sub-gray);
+    color: var(--sub-gray) !important;
 }
 
 .dark-gray {
